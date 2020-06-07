@@ -4,7 +4,7 @@
 --
 set define off
 begin
-    pkg_department.p_add_department(1, 'Management',             'London');
+    pkg_department.p_add_department(1, 'Management',             'London'); 
     pkg_department.p_add_department(2, 'Engineering',            'Cardiff');
     pkg_department.p_add_department(3, 'Research & Development', 'Edinburgh');
     pkg_department.p_add_department(4, 'Sales',                  'Belfast');

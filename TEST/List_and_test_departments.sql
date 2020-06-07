@@ -17,11 +17,11 @@ exec pkg_department.p_add_department(1, 'Management', 'London');
 -- Incorrect data type, caught by SQL not the code
 --
 set serveroutput on
-begin pkg_department.p_add_department('ONE', 'Management', 'London');
-end;
+exec pkg_department.p_add_department('ONE', 'Management', 'London');
+
 
 -- null value
 --
-set serveroutput on
+set serveroutput on echo off
 exec pkg_department.p_add_department(1, 'Management', NULL);
 

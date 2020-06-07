@@ -1,6 +1,7 @@
 -- List the employee before the salary update
 -- 
 variable c1 REFCURSOR
+set serveroutput on echo off
 col employee_name format a24
 col job_title     format a24
 col manager_name  format a24
@@ -14,6 +15,7 @@ BEGIN
     pkg_employee.p_adjust_salary(9001, -12.5);  -- Cut but 12.5%
     commit;
 END;
+/
 
 -- Adjust missing employee
 -- no rows to update but should not throw an exception
@@ -22,6 +24,7 @@ BEGIN
     pkg_employee.p_adjust_salary(99, -12.5);  -- Cut but 12.5%
     commit;
 END;
+/
 
 --Check the employee now that we have made the adjustment
 --
